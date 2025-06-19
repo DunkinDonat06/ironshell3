@@ -1,0 +1,6 @@
+gitleaks:
+  redactors: true
+semgrep:
+  config: "p/ci"
+trivy:
+  severity: "HIGH,CRITICAL"

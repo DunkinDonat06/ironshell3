@@ -1,0 +1,8 @@
+```yaml
+- name: Upload SARIF to GitHub Security
+  uses: github/codeql-action/upload-sarif@v3
+  with:
+    sarif_file: report.sarif
+    category: ironshell
+```
+_Добавь этот шаг в свой GitHub Actions workflow после генерации SARIF-отчёта._

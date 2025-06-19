@@ -1,0 +1,7 @@
+paths:
+  - "/etc/"
+  - "/var/"
+  - "/root/"
+  - "/home/"
+  - "*.pem"
+  - "*.key"

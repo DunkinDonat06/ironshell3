@@ -1,0 +1,15 @@
+type: map
+mapping:
+  gitleaks: {type: map, required: False}
+  semgrep: {type: map, required: False}
+  bandit: {type: map, required: False}
+  brakeman: {type: map, required: False}
+  eslint: {type: map, required: False}
+  trufflehog: {type: map, required: False}
+  checkov: {type: map, required: False}
+  tfsec: {type: map, required: False}
+  kubesec: {type: map, required: False}
+  trivy: {type: map, required: False}
+  dockle: {type: map, required: False}
+  syft: {type: map, required: False}
+  osv_scanner: {type: map, required: False}

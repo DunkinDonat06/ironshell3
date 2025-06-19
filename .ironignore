@@ -1,0 +1,10 @@
+# Список директорий и файлов, которые не сканировать
+node_modules/
+venv/
+.env
+.git
+__pycache__/
+*.pyc
+*.pyo
+dist/
+build/

@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "ironshell"
+version = "3.0.0"
+description = "DevSecOps CLI/Web-комбайн: SAST, DAST, IaC, SBOM, Secrets, Container"
+authors = ["Твоё Имя <you@email.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "ironshell"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+fastapi = "^0.110"
+uvicorn = "^0.29"
+pyyaml = "^6"
+celery = "^5"
+redis = "^5"
+sqlalchemy = "^2"
+jinja2 = "^3"
+aiohttp = "^3"
+httpx = "^0.27"
+# ... добавь свои остальные зависимости
+
+[tool.poetry.scripts]
+ironshell = "ironshell.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

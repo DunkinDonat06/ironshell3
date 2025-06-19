@@ -1,0 +1,17 @@
+name: PR Scan Comment
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  scan-and-comment:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run IronShell scan
+        run: poetry run ironshell --format markdown --output-dir results
+      - name: Create PR comment with scan results
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          path: results/ironshell_report.md

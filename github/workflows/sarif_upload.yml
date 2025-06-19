@@ -1,0 +1,21 @@
+name: Upload SARIF report
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+
+jobs:
+  upload-sarif:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download SARIF artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ironshell_report
+      - name: Upload SARIF to GitHub Security
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: ironshell_report/ironshell_report.sarif
+          category: ironshell
